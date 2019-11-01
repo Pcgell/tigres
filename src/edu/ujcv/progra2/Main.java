@@ -1,17 +1,16 @@
 package edu.ujcv.progra2;
 
-import org.supercsv.cellprocessor.ParseDate;
-import org.supercsv.cellprocessor.constraint.LMinMax;
-import org.supercsv.cellprocessor.constraint.NotNull;
-import org.supercsv.cellprocessor.constraint.StrRegEx;
-import org.supercsv.cellprocessor.constraint.UniqueHashCode;
-import org.supercsv.cellprocessor.ift.CellProcessor;
-import org.supercsv.io.CsvBeanReader;
-import org.supercsv.prefs.CsvPreference;
+import edu.ujcv.progra2.Vehiculos.Aux.Motor;
+import edu.ujcv.progra2.Vehiculos.Aux.TipoRuedas;
+import edu.ujcv.progra2.Vehiculos.Carro;
+import edu.ujcv.progra2.parcial2.Bar;
+import edu.ujcv.progra2.parcial2.Bash;
+import edu.ujcv.progra2.parcial2.Foo;
+import edu.ujcv.progra2.parcial2.Herencia;
+
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Optional;
+
 
 
 
@@ -20,11 +19,13 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-       AlumnosController ac= new AlumnosController();
-       ac.presentMenuObtenerResultado();
-       ac.presentarListaAlumnos();
+        Carro carro  = new Carro("Chevy","2015","Naranja",new Motor(),new TipoRuedas());
+
+        System.out.println(carro);
 
     }
+
+
 
     public static <T>void initArray(T[]array, T elemento){
         for (int i = 0; i < array.length; i++) {
@@ -117,6 +118,34 @@ public class Main {
 
         return  retval;
     }
+
+
+
+    //Repaso
+    // programacion imperativa  - paradigma
+    // tipos de datos
+    // metodos
+    // objetos poo - paradigma
+    // encapsular y extender* - 1 proteger datos 2. accesores mutadores 3. constructores
+    // arreglos - objeto
+    // plantillas - genericas
+
+
+    //pop - paradigma
+    //lisp - paradigma
+    // funcional-
+
+    // Foo a = new Foo();
+    // superficial
+    // Foo b = a;
+    // profunda
+    // Foo b = new Foo(a);
+
+
+
+    //dada una lista de elementos eliminar los duplicados
+    // retornar una lista de duplicados
+
 
 
 
