@@ -10,18 +10,26 @@ import edu.ujcv.progra2.parcial2.Herencia;
 
 
 import java.io.*;
-
-
-
+import java.util.ArrayList;
 
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        Carro carro  = new Carro("Chevy","2015","Naranja",new Motor(),new TipoRuedas());
 
-        System.out.println(carro);
+        Bar b = new Bar();
+
+        Bash bash = new Bash();
+
+        ArrayList<Foo> fooList = new ArrayList<>();
+
+        fooList.add(bash);
+        fooList.add(b);
+
+        for (int i = 0; i <fooList.size(); i++) {
+            System.out.println(fooList.get(i));
+        }
 
     }
 

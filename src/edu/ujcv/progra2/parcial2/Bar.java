@@ -16,4 +16,13 @@ public class Bar extends Foo {
         System.out.println("creando bar");
     }
 
+    @Override
+    public String toString(){
+        return doBar();
+    }
+
+    public String doBar(){
+        return "is Bar";
+    }
+
 }

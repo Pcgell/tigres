@@ -6,6 +6,7 @@ public abstract class Foo extends Herencia{
 
 
     protected int x;
+
     public String doFoo(){
         return "is foo";
     }
@@ -19,4 +20,9 @@ public abstract class Foo extends Herencia{
     }
 
     public abstract void onCreate();
+
+    @Override
+    public String toString(){
+        return doFoo();
+    }
 }

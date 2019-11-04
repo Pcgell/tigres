@@ -16,4 +16,13 @@ public class Bash extends Bar {
         super.onCreate();
         System.out.println("creando Bash!!");
     }
+
+    @Override
+    public String toString(){
+        return doBash();
+    }
+
+    public String doBash(){
+        return "is Bash";
+    }
 }
