@@ -11,27 +11,56 @@ import edu.ujcv.progra2.parcial2.Herencia;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
+        Foo anonima =  new Foo() {
+            @Override
+            public void onCreate() {
+
+            }
+
+            @Override public String doFoo(){
+                return "super duper Fooooo!!!";
+            }
+        };
+
+
+
+        Foo anonima2 = new Foo() {
+            @Override
+            public void onCreate() {
+
+            }
+        };
+
 
         Bar b = new Bar();
 
         Bash bash = new Bash();
 
-        ArrayList<Foo> fooList = new ArrayList<>();
+        ArrayList<Foo> fooList = new ArrayList<>(){
+            public Foo get(int index){
+                return super.get(this.size() - index -1);
+            }
+        };
 
         fooList.add(bash);
         fooList.add(b);
+        fooList.add(anonima);
+        fooList.add(anonima2);
 
         for (int i = 0; i <fooList.size(); i++) {
             System.out.println(fooList.get(i));
         }
 
     }
+    // ejemplo clases anonimas y polymorfismo en la vida real.
+    // https://developer.android.com/training/volley/simple.html#kotlin
 
 
 
